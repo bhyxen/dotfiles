@@ -1,3 +1,5 @@
+# https://spaceship-prompt.sh/config/intro/
+
 SPACESHIP_AZURE_SHOW=false
 SPACESHIP_GCLOUD_SHOW=false
 SPACESHIP_TIME_SHOW=true
