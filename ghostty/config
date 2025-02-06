@@ -1,0 +1,8 @@
+# https://ghostty.org/docs/config
+
+window-height = 30
+window-width = 110
+font-size = 20
+window-inherit-font-size = true
+font-family = "0xProto Nerd Font Mono"
+font-feature = -calt, -liga, -dlig
