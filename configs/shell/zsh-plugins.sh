@@ -6,6 +6,3 @@ source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # Autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Add git-extras completions
-source /opt/homebrew/opt/git-extras/share/git-extras/git-extras-completion.zsh

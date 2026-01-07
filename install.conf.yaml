@@ -20,3 +20,4 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [poetry completions zsh > ~/.zfunc/_poetry, Add poetry completions]
