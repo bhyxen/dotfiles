@@ -1,0 +1,4 @@
+alias pir="pip install -r requirements.txt"
+alias sve="source venv/bin/activate || source .venv/bin/activate"
+alias cve="python3 -m venv venv"
+alias pve="python3 -m venv venv"

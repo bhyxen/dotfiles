@@ -3,13 +3,20 @@
       relink: true
       create: true
 
-- clean: ['~']
+- clean: ["~", "~/.config"]
 
 - link:
-    ~/.zshrc: configs/zsh/.zshrc
     ~/.config/starship.toml: configs/starship/starship.toml
-    ~/.config/yazi: configs/yazi
+    ~/.config/yazi: 
+      path: configs/yazi
+      force: true
+      backup: true
     ~/.config/bat/config: configs/bat/bat.conf
+    ~/.shell: configs/shell
+    ~/.zshrc:
+      path: configs/zsh/.zshrc
+      force: true
+      backup: true
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --init --recursive, Installing submodules]
