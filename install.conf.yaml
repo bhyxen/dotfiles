@@ -3,7 +3,16 @@
       relink: true
       create: true
 
-- clean: ["~", "~/.config"]
+- clean:
+    ~/:
+    ~/.config:
+      recursive: true
+
+- plugins:
+  - submodules/dotbot-brew
+
+- brew:
+    - mise
 
 - link:
     ~/.config/starship.toml: configs/starship/starship.toml
@@ -20,4 +29,5 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [mise use -g poetry@latest, Install poetry with mise]
     - [poetry completions zsh > ~/.zfunc/_poetry, Add poetry completions]
