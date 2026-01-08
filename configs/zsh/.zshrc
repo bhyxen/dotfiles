@@ -1,11 +1,11 @@
 # Plugins
-source ~/.shell/zsh-plugins.sh
+source ~/.config/shell/zsh-plugins.sh
 
 # Aliases
-source ~/.shell/aliases.sh
+source ~/.config/shell/aliases.sh
 
 # Completions
-source ~/.shell/completions.sh
+source ~/.config/shell/completions.sh
 
 # Activate mise to use tools without running 'mise exec|x'
 eval "$(mise activate zsh)"
