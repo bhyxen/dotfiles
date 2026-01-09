@@ -8,11 +8,25 @@
     ~/.config:
       recursive: true
 
+# Make sure git submodules are initialized first to get dotbot-brew working
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
 - plugins:
   - submodules/dotbot-brew
 
 - brew:
-    - mise
+    - mise # dev tools, env vars, task runner | https://github.com/jdx/mise
+    - fd # A simple, fast and user-friendly alternative to 'find' | https://github.com/sharkdp/fd
+    - zoxide # A smarter cd command. Supports all major shells. | https://github.com/ajeetdsouza/zoxide
+    - fzf # A command-line fuzzy finder | https://github.com/junegunn/fzf
+    - atuin # Magical shell history | https://github.com/ellie/atuin
+    - starship # The minimal, blazing-fast, and infinitely customizable prompt for any shell! | https://github.com/starship/starship
+    - zsh-autocomplete # Real-time type-ahead completion for Zsh. Asynchronous find-as-you-type autocompletion. | https://github.com/marlonrichert/zsh-autocomplete
+    - zsh-fast-syntax-highlighting # Feature-rich syntax highlighting for ZSH | https://github.com/zdharma-continuum/fast-syntax-highlighting
+    - zsh-autosuggestions # Fish-like autosuggestions for zsh | https://github.com/zsh-users/zsh-autosuggestions
+    - lsd # The next gen ls command | https://github.com/lsd-rs/lsd
+    - font-hack-nerd-font # A typeface designed for source code | https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack
 
 - link:
     ~/.config/starship.toml: configs/starship/starship.toml
@@ -28,6 +42,5 @@
       backup: true
 
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
     - [mise use -g poetry@latest, Install poetry with mise]
     - [poetry completions zsh > ~/.zfunc/_poetry, Add poetry completions]

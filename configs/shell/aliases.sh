@@ -3,3 +3,10 @@ alias sve="source venv/bin/activate || source .venv/bin/activate"
 alias cve="python3 -m venv venv"
 alias pve="python3 -m venv venv"
 alias dotfiles_update="~/Developer/dotfiles/install"
+
+# Replace default ls with lsd
+alias ls='lsd'
+alias l='lsd -l'
+alias la='lsd -a'
+alias lla='lsd -la'
+alias lt='lsd --tree'

@@ -13,5 +13,11 @@ eval "$(mise activate zsh)"
 # Atuin
 eval "$(atuin init zsh)"
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+# Initialize zoxide
+eval "$(zoxide init zsh)"
+
 # Initialize starship at the end
 eval "$(starship init zsh)"
